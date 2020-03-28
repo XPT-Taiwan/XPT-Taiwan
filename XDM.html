@@ -16,7 +16,8 @@
 
         <title>XDM</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/lightbox.min.css">
+        <!-- <link rel="stylesheet" href="css/lightbox.min.css"> -->
+        <link rel="stylesheet" href="jquery.fancybox.min.css">
         <style>
             * {
                 -webkit-overflow-scrolling: touch;
@@ -120,7 +121,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-3" >
-                    <a class="example-image-link" href="media/XDM/Full09.jpg" data-lightbox="example-set" data-title=""><img class="example-image" src ="media/XDM/XDM9.png" alt= "XDM9" ></a>
+                    <a class="example-image-link" data-fancybox href="media/XDM/Full09.jpg" data-lightbox="example-set" data-title=""><img class="example-image" src ="media/XDM/XDM9.png" alt= "XDM9"  width = 90% height=auto></a>
                     <br>
                     <br>
                     <p style="font-size: 16px; margin:0px; padding: 0px;">饗得美原味牛軋千層酥</p>
@@ -158,6 +159,8 @@
                 Contact us
             </div>
         </footer>
-        <script src="js/lightbox-plus-jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	    <script src="jquery.fancybox.min.js"></script>
+        <!-- <script src="js/lightbox-plus-jquery.min.js"></script> -->
     </body>
 </html>
