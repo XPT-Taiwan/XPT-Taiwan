@@ -22,6 +22,12 @@
             a {
                 text-decoration: none;
             }
+            .header_links{
+                font-size:24px; 
+                color:white; 
+                border:3px inset #AAAAAA;
+
+            }
             @media (min-width: 501){
                 html, body {
                     margin:0; 
@@ -41,13 +47,13 @@
                 html, body {
                     margin:0; 
                     padding:0; 
-                    width:100%; 
-                    overflow: auto!important;
-                    max-height: 100% !important;
+                    /* width:100%;  */
+                    /* overflow: auto!important;
+                    max-height: 100% !important; */
                 }
-                #container_div{
+                /* #container_div{
                     height:50vh !important;
-                }
+                } */
             }
             body {
                 text-align: center;
@@ -76,15 +82,75 @@
                width: device-width;
                height:device-height
             }
+            .sidenav {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+                }
+
+            .sidenav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+                }
+
+            .sidenav a:hover {
+                color: #f1f1f1;
+                cursor: pointer;
+                }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+                }
+
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+                }
+            #menu_icon:hover{
+                cursor: pointer;
+
+            }
+   
         </style>
     </head>
     <div class="nav-top" style="background-color: orange; min-height: 60px;">
-        <img src="media/default/XPT-header.png" alt="XPT" align="left"/>
+        <img id="menu_icon" onclick="openNav()" src="media/default/Hamburger_icon.svg.png" alt="XPT" align="left"/>
+        <div style="padding-top: 25px; padding-right:260px; text-align: right;">
+            <a class="header_links"href="XPT.html">饗破頭</a>
+            <a class="header_links" href="XDM.html"> 饗得美</a>
+            <a class="header_links" href="YCT.html"> 養粹糖</a>
+            <a class="header_links" href="#"> 聯絡我們</a>
+        </div>
         <!-- <h3 style="text-align: left; color:white; font-family:微軟正黑體;">&nbsp; 美食 創新 領頭羊</h3> -->
     </div>
     <body>
-        <img src="media/default/homepagebn.jpg" alt="homepage" width="100%"/>
-        <div id="container_div"style="display:flex; margin:auto; margin-bottom:50px;" >   
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="XPT.html">饗破頭</a>
+            <a href="XDM.html">饗得美</a>
+            <a href="YCT.html">養粹糖</a>
+            <a href="#">聯絡我們</a>
+        </div>
+        <!-- <img src="media/default/homepagebn.jpg" alt="homepage" width="100%"/> -->
+        <img src="media/default/banner/01.png" alt="homepage"/><br>
+        <img src="media/default/banner/02.png" alt="homepage"/><br>
+        <img src="media/default/banner/03.jpg" alt="homepage"/><br>
+        <!-- <div id="container_div"style="display:flex; margin:auto; margin-bottom:50px;" >   
             <div id="center" class="container" style="display:inline-block;">
                 <div class="row" style="display:inline-block; background-color: white; margin-top: 0px;">
                     <div class="d-flex justify-content-center">
@@ -108,10 +174,19 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <div class="footer" style="background-color: orange;min-height:100px;width: 100%;height:100%;  margin-top:0px;">
+        <footer>
+            <div class="nav-bottom" style="background-color: orange;min-height:100px;width: 100%;height:100%;  margin-top:0px;">
                 Contact us
-            </div>
-        </footer>
+            </div> 
+        </footer>-->
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
     </body>
 </html>
