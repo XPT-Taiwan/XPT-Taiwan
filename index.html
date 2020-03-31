@@ -25,12 +25,13 @@
             }
             .header_links{
                 font-size:calc(0.9em + 0.7vw); 
-                color:white; 
-                border:3px inset #AAAAAA;
+                color:black; 
+                /* border:3px inset #AAAAAA; */
+                border:3px inset gray;
 
             }
             .header_links:hover{
-                color:white;
+                color:black;
                 text-decoration: none;
                 background-color:darkgrey;
 
@@ -58,9 +59,10 @@
             }
             body {
                 text-align: center;
-                background: url("media/default/main-background.png");
-                background-repeat:no-repeat;
-                background-size: 100% 100%;
+                /* background: url("media/default/main-background.png"); */
+                /* background-repeat:no-repeat; */
+                /* background-size: 100% 100%; */
+                background-color: white;
                 margin:auto;
                 }
             .col-lg-3{
@@ -144,7 +146,11 @@
             <a href="#">聯絡我們</a>
         </div>
         <div style="width:100%;">
-            <img id="menu_icon" onclick="openNav()" src="media/default/Hamburger_icon.svg.png" alt="XPT" align="left"/>
+            <div style ="width: 100%; background-color: #AAAAAA;">
+                <img id="menu_icon" onclick="openNav()" src="media/default/Hamburger_icon.svg.png" alt="menu" align="left"/>
+                <img src ="media/default/Main_logo.png" alt="logo" align="center"/><br>
+            </div>
+            <br>
             <a class="header_links"href="XPT.html" >饗破頭</a>
             <a class="header_links" href="XDM.html"> 饗得美</a>
             <a class="header_links" href="YCT.html"> 養粹糖</a>
