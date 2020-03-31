@@ -27,9 +27,10 @@
             }
             .header_links{
                 font-size:calc(0.9em + 0.7vw); 
-                color:black; 
+                color:white; 
                 /* border:3px inset #AAAAAA; */
-                margin:0.2vw
+                margin:0.2vw;
+                vertical-align: middle;
 
             }
             .header_links:hover{
@@ -150,7 +151,7 @@
         <div style="width:100%; display: inline-block;">
             <img src ="media/default/Main_logo.png" alt="logo" align="left"/><br>
         </div>
-        <div style ="width: 100%; background-color: #AAAAAA; padding:0.5vw; display: inline-block;">
+        <div style ="width: 100%; background-color: #B2000E; padding:0.5vw; display: inline-block;">
             <img id="menu_icon" onclick="openNav()" src="media/default/Hamburger_icon.svg.png" alt="menu" align="left"/>
             
             <a class="header_links"href="XPT.html" >饗破頭</a>
@@ -184,8 +185,7 @@
             var slider = new airSlider({
                 autoPlay: true,
                 autoPlayTime: 8000,
-                width:'1000px',
-                hight:'395px'       
+                width:'1000px'
 
             });
 
