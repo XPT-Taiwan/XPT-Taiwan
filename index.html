@@ -16,7 +16,7 @@
         
         <title>Home</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/air-slider.min.css">
+        <link rel="stylesheet" href="css/responsiveslides.css">
         <style>
 
             * {
@@ -160,20 +160,22 @@
             <a class="header_links" href="#"> 聯絡我們</a>
         </div>
         <br>
+        <dev class="rslides_container" style="text-align: center;">
+        <ul class="rslides" style="list-style-type: none; text-align: center; width: 70%;margin: auto;">
+            <li style="list-style-type: none; text-align: center;"><img src="media/default/banner/01.png" alt=""></li>
+            <li style="list-style-type: none; text-align: center;"><img src="media/default/banner/02.png" alt=""></li>
+            <li style="list-style-type: none; text-align: center;"><img src="media/default/banner/03.jpg" alt=""></li>
+        </ul>
+        </dev>
 
-        <div class="air-slider">
-            <div class="slide">
-                <img  class="mySlides" src="media/default/banner/01.png" alt="homepage" />
-            </div>
-            <div class="slide">
-                <img class="mySlides" src="media/default/banner/02.png" alt="homepage" />
-            </div>
-            <div class="slide">
-                <img class="mySlides" src="media/default/banner/03.jpg" alt="homepage" />
-            </div>
-        </div>
-        <script src="js/air-slider.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="js/responsiveslides.min.js"></script>
         <script>
+
+            $(function() {
+                $(".rslides").responsiveSlides({auto: true,timeout: 4000,nav: true,pager: true,namespace: "transparent-btns"});
+            });
+
             function openNav() {
               document.getElementById("mySidenav").style.width = "250px";
             }
@@ -182,12 +184,6 @@
               document.getElementById("mySidenav").style.width = "0";
             }
 
-            var slider = new airSlider({
-                autoPlay: true,
-                autoPlayTime: 8000,
-                width:'1000px'
-
-            });
 
         </script>
         
