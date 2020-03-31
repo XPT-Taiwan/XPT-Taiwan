@@ -16,7 +16,9 @@
         
         <title>Home</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/air-slider.min.css">
         <style>
+
             * {
                 -webkit-overflow-scrolling: touch;
             }
@@ -27,7 +29,7 @@
                 font-size:calc(0.9em + 0.7vw); 
                 color:black; 
                 /* border:3px inset #AAAAAA; */
-                border:3px inset gray;
+                margin:0.2vw
 
             }
             .header_links:hover{
@@ -145,24 +147,31 @@
             <a href="YCT.html">養粹糖</a>
             <a href="#">聯絡我們</a>
         </div>
-        <div style="width:100%;">
-            <div style ="width: 100%; background-color: #AAAAAA;">
-                <img id="menu_icon" onclick="openNav()" src="media/default/Hamburger_icon.svg.png" alt="menu" align="left"/>
-                <img src ="media/default/Main_logo.png" alt="logo" align="center"/><br>
-            </div>
-            <br>
+        <div style="width:100%; display: inline-block;">
+            <img src ="media/default/Main_logo.png" alt="logo" align="left"/><br>
+        </div>
+        <div style ="width: 100%; background-color: #AAAAAA; padding:0.5vw">
+            <img id="menu_icon" onclick="openNav()" src="media/default/Hamburger_icon.svg.png" alt="menu" align="left"/>
+            
             <a class="header_links"href="XPT.html" >饗破頭</a>
             <a class="header_links" href="XDM.html"> 饗得美</a>
             <a class="header_links" href="YCT.html"> 養粹糖</a>
             <a class="header_links" href="#"> 聯絡我們</a>
         </div>
         <br>
-        <div id="banners_images">
-            <img  class="single_banner" src="media/default/banner/01.png" alt="homepage"/>
-            <img class="single_banner" src="media/default/banner/02.png" alt="homepage"/>
-            <img class="single_banner" src="media/default/banner/03.jpg" alt="homepage"/>
-            <img class="single_banner" src="media/default/banner/04.jpg" alt="homepage"/>
+
+        <div class="air-slider">
+            <div class="slide">
+                <img  class="mySlides" src="media/default/banner/01.png" alt="homepage" style="width:100%"/>
+            </div>
+            <div class="slide">
+                <img class="mySlides" src="media/default/banner/02.png" alt="homepage" style="width:100%"/>
+            </div>
+            <div class="slide">
+                <img class="mySlides" src="media/default/banner/03.jpg" alt="homepage" style="width:100%"/>
+            </div>
         </div>
+        <script src="js/air-slider.min.js"></script>
         <script>
             function openNav() {
               document.getElementById("mySidenav").style.width = "250px";
@@ -171,6 +180,16 @@
             function closeNav() {
               document.getElementById("mySidenav").style.width = "0";
             }
+
+            var slider = new airSlider({
+                autoPlay: true,
+                autoPlayTime: 5000,
+                width:'1000px'          
+
+            });
+
         </script>
+        
+
     </body>
 </html>
