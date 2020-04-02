@@ -23,14 +23,27 @@
                  background: url("media/default/YCT-background.jpg"); 
                 }
         </style> -->
-        <div class="nav-top" style="background-color: orange;min-height: 60px;">
-            <a href="index.html">
-                <img src="media/default/YCT-header.jpg" alt="YCT" align="left"/>
-            </a>
-            <h3 style="text-align: left; color:white; font-family:微軟正黑體; white-space: nowrap;">&nbsp; 美食 創新 領頭羊</h3>
-        </div>
     </head>
     <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="XPT.html">饗破頭</a>
+            <a href="XDM.html">饗得美</a>
+            <a href="YCT.html">養粹糖</a>
+            <a href="#">聯絡我們</a>
+            <a href="index.html">回首頁</a>
+        </div>
+        <div style="width:100%; display: inline-block;">
+            <img id="YCTLogo" src ="media/default/YCT-header.png" alt="logo" align="left"/><br>
+        </div>
+        <div style ="width: 100%; background-color: #B2000E; padding:0.5vw; display: inline-block;">
+            <img id="menu_icon" onclick="openNav()" src="media/default/Hamburger_icon.svg.png" alt="menu" align="left"/>
+            
+            <a class="header_links"href="XPT.html" >饗破頭</a>
+            <a class="header_links" href="XDM.html"> 饗得美</a>
+            <a class="header_links" href="YCT.html"> 養粹糖</a>
+            <a class="header_links" href="#"> 聯絡我們</a>
+        </div>
         <br>
         <div class="container">
             <!-- <div class="row">
@@ -131,7 +144,15 @@
             </div>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	    <script src="jquery.fancybox.min.js"></script>
+        <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+            }
+            
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+        
     </body>
 </html>

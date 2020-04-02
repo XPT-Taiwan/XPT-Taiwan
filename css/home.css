@@ -33,11 +33,16 @@
                     height:100vh;
 
                 }
+                
             }
             @media (max-width: 500px){
                 html, body {
                     margin:0; 
                     padding:0; 
+                }
+                #MainLogo{
+                    width:90%;
+                    height: auto;
                 }
             }
             body {
