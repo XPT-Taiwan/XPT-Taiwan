@@ -16,129 +16,8 @@
         
         <title>Home</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="css/responsiveslides.css">
-        <style>
-
-            * {
-                -webkit-overflow-scrolling: touch;
-            }
-            a {
-                text-decoration: none;
-            }
-            .header_links{
-                font-size:calc(0.9em + 0.7vw); 
-                color:white; 
-                /* border:3px inset #AAAAAA; */
-                margin:0.2vw;
-                vertical-align: middle;
-
-            }
-            .header_links:hover{
-                color:black;
-                text-decoration: none;
-                background-color:darkgrey;
-
-            }
-            @media (min-width: 501){
-                html, body {
-                    margin:0; 
-                    padding:0; 
-                    width:100%; 
-                    height:100%; 
-                    overflow:auto;
-                    overflow-x: initial;
-                    max-height: 100% !important;
-                }
-                #container_div{
-                    height:100vh;
-
-                }
-            }
-            @media (max-width: 500px){
-                html, body {
-                    margin:0; 
-                    padding:0; 
-                }
-            }
-            body {
-                text-align: center;
-                /* background: url("media/default/main-background.png"); */
-                /* background-repeat:no-repeat; */
-                /* background-size: 100% 100%; */
-                background-color: white;
-                margin:auto;
-                }
-            .col-lg-3{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            #center{
-                margin:auto;
-                margin-top:0;
-
-                
-            }
-            .footer{
-                margin-top: 0px;
-                padding-top: 0px;
-                margin-bottom: 0px;
-            }
-            @-ms-viewport{
-               width: device-width;
-               height:device-height
-            }
-            .sidenav {
-                height: 100%;
-                width: 0;
-                position: fixed;
-                z-index: 1;
-                top: 0;
-                left: 0;
-                background-color: #111;
-                overflow-x: hidden;
-                transition: 0.5s;
-                padding-top: 60px;
-                }
-
-            .sidenav a {
-                padding: 8px 8px 8px 32px;
-                text-decoration: none;
-                font-size: 25px;
-                color: #818181;
-                display: block;
-                transition: 0.3s;
-                }
-
-            .sidenav a:hover {
-                color: #f1f1f1;
-                cursor: pointer;
-                }
-
-            .sidenav .closebtn {
-                position: absolute;
-                top: 0;
-                right: 25px;
-                font-size: 36px;
-                margin-left: 50px;
-                }
-
-            @media screen and (max-height: 450px) {
-                .sidenav {padding-top: 15px;}
-                .sidenav a {font-size: 18px;}
-                }
-            #menu_icon:hover{
-                cursor: pointer;
-
-            }
-            #banners_images{
-                height:100%;
-                width:100%
-            }
-            .single_banner{
-                max-width:100%;
-            }
-        </style>
+        <link rel="stylesheet" href="css/w3.css">
+        <link rel="stylesheet" href ="css/home.css">
     </head>
     <body>
         <div id="mySidenav" class="sidenav">
@@ -160,21 +39,48 @@
             <a class="header_links" href="#"> 聯絡我們</a>
         </div>
         <br>
-        <dev class="rslides_container" style="text-align: center;">
-        <ul class="rslides" style="list-style-type: none; text-align: center; width: 70%;margin: auto;">
-            <li style="list-style-type: none; text-align: center;"><img src="media/default/banner/01.png" alt=""></li>
-            <li style="list-style-type: none; text-align: center;"><img src="media/default/banner/02.png" alt=""></li>
-            <li style="list-style-type: none; text-align: center;"><img src="media/default/banner/03.jpg" alt=""></li>
-        </ul>
-        </dev>
+        <div class="w3-content w3-display-container" >
+            <img class="mySlides w3-animate-fading" src="media/default/banner/01.png" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="media/default/banner/02.png" style="width:100%">
+            <img class="mySlides w3-animate-fading" src="media/default/banner/03.jpg" style="width:100%">
+          
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+          </div>
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-        <script src="js/responsiveslides.min.js"></script>
+        <div class="w3-content w3-display-container">
+            <img class="single_banner" src="media/default/banner/001.png" alt="homepage"style="width:100%">
+            <img class="single_banner" src="media/default/banner/002.png" alt="homepage"style="width:100%">
+            <img class="single_banner" src="media/default/banner/003.jpg" alt="homepage"style="width:100%">
+            <img class="single_banner" src="media/default/banner/004.jpg" alt="homepage"style="width:100%">
+        </div>
+
         <script>
+            var slideIndex = 1;
+            var auto_index = 0;
+            showDivs(slideIndex);
+            auto_divs();
+            function auto_divs(){
+                showDivs(slideIndex += auto_index);
+                auto_index =1;
+                setTimeout(auto_divs, 6000);
+            }
+            function plusDivs(n) {
+            showDivs(slideIndex += n);
+            }
 
-            $(function() {
-                $(".rslides").responsiveSlides({auto: true,timeout: 4000,nav: true,pager: true,namespace: "transparent-btns"});
-            });
+            function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            x[slideIndex-1].style.display = "block";  
+            }
+            
+            
 
             function openNav() {
               document.getElementById("mySidenav").style.width = "250px";

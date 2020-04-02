@@ -1,0 +1,21 @@
+* {
+    -webkit-overflow-scrolling: touch;
+}
+a {
+    text-decoration: none;
+}
+html, body {margin:0; padding:0; width:100%; height:100%; overflow:auto;}
+body {
+    text-align: center;
+    background:white;
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    }
+.col-sm-3{
+
+    color:black;
+}
+@-ms-viewport{
+   width: device-width;
+   height:device-height
+}
