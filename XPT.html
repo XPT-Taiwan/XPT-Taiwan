@@ -16,7 +16,6 @@
 
         <title>XPT</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="jquery.fancybox.min.css">
         <link rel="stylesheet" href="css/product.css">
         <!-- <style>
             body {
@@ -34,14 +33,14 @@
             <a href="index.html">回首頁</a>
         </div>
         <div id="XPTnav" class="sidenav">
-            <a href="javascript:void(0)" class="backbtn" onclick="openNav()">&larr;</a>
+            <a href="javascript:void(0)" class="backbtn" onclick="openNav()"><big><big>&larr;</big></big></a>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             
             <a href="XPT.html"><h3>饗破頭</h3>
             <p>養氣黑糖塊<br/>Brown sugar cubes</p></a>
         </div>
         <div id="XDMnav" class="sidenav">
-            <a href="javascript:void(0)" class="backbtn" onclick="openNav()">&larr;</a>
+            <a href="javascript:void(0)" class="backbtn" onclick="openNav()"><big><big>&larr;</big></big></a>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             
             <a href="XDM.html"><h3>饗得美</h3>
@@ -51,7 +50,7 @@
             <p>即食零食<br/>Instant snacks</p></a>
         </div>
         <div id="YCTnav" class="sidenav">
-            <a href="javascript:void(0)" class="backbtn" onclick="openNav()">&larr;</a>
+            <a href="javascript:void(0)" class="backbtn" onclick="openNav()"><big><big>&larr;</big></big></a>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             
             <a href="YCT.html"><h3>養粹糖</h3>
@@ -60,9 +59,21 @@
             <p>養氣穀粉<br/>Grain powder</p>
             <p>烏龍茶瓜子<br/>Mixed seeds</p></a>
         </div>
-        <div id="testpic" class="sidenav">
-            <a id="close" href="javascript:void(0)" class="closebtn" style="position: fixed;"onclick="closeNav()">&times;</a>
-            <img id="full02" class="full_image"style="max-width: 100%;" src="media/XPT/Full02.jpg"/>
+        <div id="full02" class="sidenav">
+            <a id="close02" class="close closebtn" href="javascript:void(0)"  style="position: fixed;display: none;"onclick="closeNav()">&times;</a>
+            <img class="full_image"style="max-width: 100%;" src="media/XPT/Full02.jpg"/>
+        </div>
+        <div id="full03" class="sidenav">
+            <a id="close03" class="close closebtn" href="javascript:void(0)"  style="position: fixed;display: none;"onclick="closeNav()">&times;</a>
+            <img class="full_image"style="max-width: 100%;" src="media/XPT/Full03.jpg"/>
+        </div>
+        <div id="full04" class="sidenav">
+            <a id="close04" class="close closebtn" href="javascript:void(0)"  style="position: fixed;display: none;"onclick="closeNav()">&times;</a>
+            <img class="full_image"style="max-width: 100%;" src="media/XPT/Full04.jpg"/>
+        </div>
+        <div id="full05" class="sidenav">
+            <a id="close05" class="close closebtn" href="javascript:void(0)"  style="position: fixed;display: none;"onclick="closeNav()">&times;</a>
+            <img class="full_image"style="max-width: 100%;" src="media/XPT/Full05.jpg"/>
         </div>
         <div style="width:100%; display: inline-block;">
            <a href ="index.html"> <img id="MainLogo" src ="media/default/Main_logo.png" alt="logo" align="left"/></a><br>
@@ -78,16 +89,8 @@
         <br>
         <div class="container ">
             <div class="row">
-                <!-- <div class="col-sm-3" >
-                    <a data-fancybox="images" href="media/XPT/XPT1.png" data-width="1000" data-height="10113" ><img class="img-fluid" src ="media/XPT/XPT1.png" alt= "XPT1"  width = 100% height=auto></a>
-                    <br>
-                    <br>
-                    <p style="font-size: 16px; margin:0px; padding: 0px;">饗破頭木本黑糖塊-黑糖桂花</p>
-                    <p style="font-size: 16px;">315g</p>
-                    <br>
-                </div> -->
                 <div class="col-sm-3" >
-                    <a data-fancybox="images" href="javascript:void(0)" onclick="show_pic()" data-width="1000" data-height="10113" ><img class="img-fluid"  src ="media/XPT/XPT2.png" alt= "XPT2" width = 100% height=auto></a>
+                    <a href="javascript:void(0)" onclick="show_full02()" ><img src ="media/XPT/XPT2.png" alt= "XPT2" width = 100% height=auto></a>
                     <br>
                     <br>
                     <p style="font-size: 16px; margin:0px; padding: 0px;">饗破頭養氣黑糖塊–紅棗桂圓薑母</p>
@@ -95,7 +98,7 @@
                     <br>
                 </div>
                 <div class="col-sm-3" >
-                    <a data-fancybox="images" href="media/XPT/Full03.jpg" data-width="1000" data-height="10113" ><img class="img-fluid" src ="media/XPT/XPT3.png" alt= "XPT3" width = 100% height=auto></a>
+                    <a href="javascript:void(0)" onclick="show_full03()" ><img src ="media/XPT/XPT3.png" alt= "XPT3" width = 100% height=auto></a>
                     <br>
                     <br>
                     <p style="font-size: 16px; margin:0px; padding: 0px;">饗破頭養氣黑糖塊–紅棗桂圓</p>
@@ -103,53 +106,45 @@
                     <br>
                 </div>
                 <div class="col-sm-3" >
-                    <a data-fancybox="images" href="media/XPT/Full04.jpg" data-width="1000" data-height="10113" ><img class="img-fluid" src ="media/XPT/XPT4.png" alt= "XPT4" width = 100% height=auto></a>
+                    <a href="javascript:void(0)" onclick="show_full04()" ><img src ="media/XPT/XPT4.png" alt= "XPT4" width = 100% height=auto></a>
                     <br>
                     <br>
                     <p style="font-size: 16px; margin:0px; padding: 0px;">饗破頭養氣黑糖塊–黑糖薑母</p>
                     <p style="font-size: 16px;">315g</p>
                     <br>
                 </div>
-            <!-- </div>
-            <div class="row"> -->
                 <div class="col-sm-3" >
-                    <a data-fancybox="images" href="media/XPT/Full05.jpg" data-width="1000" data-height="10113" ><img class="img-fluid" src ="media/XPT/XPT5.png" alt= "XPT5"  width = 100% height=auto></a>
+                    <a href="javascript:void(0)" onclick="show_full05()" ><img class="img-fluid" src ="media/XPT/XPT5.png" alt= "XPT5"  width = 100% height=auto></a>
                     <br>
                     <br>
                     <p style="font-size: 16px; margin:0px; padding: 0px;">饗破頭養氣黑糖塊–黑糖冬瓜茶</p>
                     <p style="font-size: 16px;">315g</p>
                     <br>
                 </div>
-                <!-- <div class="col-sm-3" >
-                    <a data-fancybox="images" href="media/XPT/XPT6.png" data-width="1000" data-height="10113" ><img class="img-fluid"  src ="media/XPT/XPT6.png" alt= "XPT6" width = 100% height=auto></a>
-                    <br>
-                    <br>
-                    <p style="font-size: 16px; margin:0px; padding: 0px;">饗破頭木本漢方黑糖塊-玫瑰四物</p>
-                    <p style="font-size: 16px;">315g</p>
-                    <br>
-                </div>
-                <div class="col-sm-3" >
-                    <a data-fancybox="images" href="media/XPT/XPT7.png" data-width="1000" data-height="10113" ><img class="img-fluid" src ="media/XPT/XPT7.png" alt= "XPT7" width = 100% height=auto></a>
-                    <br>
-                    <br>
-                    <p style="font-size: 16px; margin:0px; padding: 0px;">饗破頭木本黑糖塊-黑糖玫瑰</p>
-                    <p style="font-size: 16px;">315g</p>
-                    <br>
-                </div>
-                <div class="col-sm-3" >
-                    <a data-fancybox="images" href="media/XPT/XPT8.png" data-width="1000" data-height="10113" ><img class="img-fluid" src ="media/XPT/XPT8.png" alt= "XPT8" width = 100% height=auto></a>
-                    <br>
-                    <br>
-                    <p style="font-size: 16px; margin:0px; padding: 0px;">饗破頭養氣黑糖塊–黑糖冬瓜寒天凍飲</p>
-                    <p style="font-size: 16px;">280g</p>
-                    <br>
-                </div> -->
             </div>
         </div>
         <script>
-            function show_pic(){
-                document.getElementById("testpic").style.width = "100%";
-                document.getElementById("close").style.display = "inline-block";
+            function show_full02(){
+                document.getElementById("full02").style.width = "100%";
+                document.getElementById("close02").style.display = "inline-block";
+                  
+            }
+
+            function show_full03(){
+                document.getElementById("full03").style.width = "100%";
+                document.getElementById("close03").style.display = "inline-block";
+                  
+            }
+
+            function show_full04(){
+                document.getElementById("full04").style.width = "100%";
+                document.getElementById("close04").style.display = "inline-block";
+                  
+            }
+
+            function show_full05(){
+                document.getElementById("full05").style.width = "100%";
+                document.getElementById("close05").style.display = "inline-block";
                   
             }
             function openNav() {
@@ -159,13 +154,17 @@
               document.getElementById("YCTnav").style.width = "0";
             }
             
-            function closeNav() {
-              document.getElementById("mySidenav").style.width = "0";
-              document.getElementById("XPTnav").style.width = "0";
-              document.getElementById("XDMnav").style.width = "0";
-              document.getElementById("YCTnav").style.width = "0";
-              document.getElementById("testpic").style.width = "0";  
-              document.getElementById("close").style.display = "none";
+            function closeNav() { 
+                var elements = document.getElementsByClassName("sidenav");
+                for(var x=0; x < elements.length; x++)
+                {
+                    elements[x].style.width = "0";;
+                }
+                elements = document.getElementsByClassName("close");
+                for(var x=0; x < elements.length; x++)
+                {
+                    elements[x].style.display = "none";
+                }
               
             }
 
