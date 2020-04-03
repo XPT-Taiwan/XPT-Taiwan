@@ -46,11 +46,6 @@
             }
             
         }
-        @media(max-width:1000px){
-            #full_image{
-                width:100%;
-            }
-        }
         body {
             text-align: center;
             /* background: url("media/default/main-background.png"); */
