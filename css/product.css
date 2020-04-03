@@ -94,6 +94,13 @@
             display: block;
             transition: 0.3s;
             }
+        .sidenav p {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 1.3vw;
+            color: #818181;
+            display: block;
+            }
 
         .sidenav a:hover {
             color: #f1f1f1;
@@ -107,7 +114,13 @@
             font-size: 36px;
             margin-left: 50px;
             }
-
+        .backbtn{
+            position: absolute;
+            top: 0.5vw;
+            left: 0.5vw;
+            font-size: 36px;
+            margin-right: 50px;
+        }
         @media screen and (max-height: 450px) {
             .sidenav {padding-top: 15px;}
             .sidenav a {font-size: 18px;}

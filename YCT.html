@@ -27,11 +27,38 @@
     <body>
         <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="XPT.html">饗破頭</a>
-            <a href="XDM.html">饗得美</a>
-            <a href="YCT.html">養粹糖</a>
+            <a href="javascript:void(0)" onclick="openxptNAV()">饗破頭</a>
+            <a href="javascript:void(0)" onclick="openxdmNAV()">饗得美</a>
+            <a href="javascript:void(0)" onclick="openyctNAV()">養粹糖</a>
             <a href="contact_us.html">聯絡我們</a>
             <a href="index.html">回首頁</a>
+        </div>
+        <div id="XPTnav" class="sidenav">
+            <a href="javascript:void(0)" class="backbtn" onclick="openNav()">&larr;</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            
+            <a href="XPT.html"><h3>饗破頭</h3>
+            <p>養氣黑糖塊<br/>Brown sugar cubes</p></a>
+        </div>
+        <div id="XDMnav" class="sidenav">
+            <a href="javascript:void(0)" class="backbtn" onclick="openNav()">&larr;</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            
+            <a href="XDM.html"><h3>饗得美</h3>
+            <p>牛軋餅<br/>Soda crackers</p>
+            <p>牛軋千層酥<br/>Nougat soda crackers</p>
+            <p>極薄肉紙<br/>Pork roll</p>
+            <p>即食零食<br/>Instant snacks</p></a>
+        </div>
+        <div id="YCTnav" class="sidenav">
+            <a href="javascript:void(0)" class="backbtn" onclick="openNav()">&larr;</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            
+            <a href="YCT.html"><h3>養粹糖</h3>
+            <p>養生黑糖塊<br/>Brown sugar cubes</p>
+            <p>養生芝麻糕<br/>Black sesame cake</p>
+            <p>養氣穀粉<br/>Grain powder</p>
+            <p>烏龍茶瓜子<br/>Mixed seeds</p></a>
         </div>
         <div style="width:100%; display: inline-block;">
             <a href="index.html"><img id="YCTLogo" src ="media/default/YCT-header.png" alt="logo" align="left"/></a><br>
@@ -147,10 +174,37 @@
         <script>
             function openNav() {
               document.getElementById("mySidenav").style.width = "250px";
+              document.getElementById("XPTnav").style.width = "0";
+              document.getElementById("XDMnav").style.width = "0";
+              document.getElementById("YCTnav").style.width = "0";
             }
             
             function closeNav() {
               document.getElementById("mySidenav").style.width = "0";
+              document.getElementById("XPTnav").style.width = "0";
+              document.getElementById("XDMnav").style.width = "0";
+              document.getElementById("YCTnav").style.width = "0";
+            }
+
+            function openxptNAV(){
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("XPTnav").style.width = "250px";
+                document.getElementById("XDMnav").style.width = "0";
+                document.getElementById("YCTnav").style.width = "0";
+            }
+
+            function openxdmNAV(){
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("XPTnav").style.width = "0";
+                document.getElementById("XDMnav").style.width = "250px";
+                document.getElementById("YCTnav").style.width = "0";
+            }
+
+            function openyctNAV(){
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("XPTnav").style.width = "0";
+                document.getElementById("XDMnav").style.width = "0";
+                document.getElementById("YCTnav").style.width = "250px";
             }
         </script>
         
