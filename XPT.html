@@ -60,6 +60,10 @@
             <p>養氣穀粉<br/>Grain powder</p>
             <p>烏龍茶瓜子<br/>Mixed seeds</p></a>
         </div>
+        <div id="testpic" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <img src="media/XPT/Full02.jpg"/>
+        </div>
         <div style="width:100%; display: inline-block;">
            <a href ="index.html"> <img id="MainLogo" src ="media/default/Main_logo.png" alt="logo" align="left"/></a><br>
         </div>
@@ -83,7 +87,7 @@
                     <br>
                 </div> -->
                 <div class="col-sm-3" >
-                    <a data-fancybox="images" href="media/XPT/Full02.jpg" data-width="1000" data-height="10113" ><img class="img-fluid"  src ="media/XPT/XPT2.png" alt= "XPT2" width = 100% height=auto></a>
+                    <a data-fancybox="images" href="javascript:void(0)" onclick="show_pic()" data-width="1000" data-height="10113" ><img class="img-fluid"  src ="media/XPT/XPT2.png" alt= "XPT2" width = 100% height=auto></a>
                     <br>
                     <br>
                     <p style="font-size: 16px; margin:0px; padding: 0px;">饗破頭養氣黑糖塊–紅棗桂圓薑母</p>
@@ -143,6 +147,9 @@
             </div>
         </div>
         <script>
+            function show_pic(){
+                document.getElementById("testpic").style.width = "100%";  
+            }
             function openNav() {
               document.getElementById("mySidenav").style.width = "250px";
               document.getElementById("XPTnav").style.width = "0";
@@ -155,6 +162,7 @@
               document.getElementById("XPTnav").style.width = "0";
               document.getElementById("XDMnav").style.width = "0";
               document.getElementById("YCTnav").style.width = "0";
+              document.getElementById("testpic").style.width = "0";  
             }
 
             function openxptNAV(){
@@ -176,6 +184,7 @@
                 document.getElementById("XPTnav").style.width = "0";
                 document.getElementById("XDMnav").style.width = "0";
                 document.getElementById("YCTnav").style.width = "250px";
+                
             }
         </script>
     </body>
