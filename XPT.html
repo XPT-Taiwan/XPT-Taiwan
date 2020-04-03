@@ -61,8 +61,8 @@
             <p>烏龍茶瓜子<br/>Mixed seeds</p></a>
         </div>
         <div id="testpic" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" style="position: fixed;"onclick="closeNav()">&times;</a>
-            <img id="full02"style="display: none;" src="media/XPT/Full02.jpg"/>
+            <a id="close" href="javascript:void(0)" class="closebtn" style="position: fixed;"onclick="closeNav()">&times;</a>
+            <img id="full02" class="full_image"style="display: none;" src="media/XPT/Full02.jpg"/>
         </div>
         <div style="width:100%; display: inline-block;">
            <a href ="index.html"> <img id="MainLogo" src ="media/default/Main_logo.png" alt="logo" align="left"/></a><br>
@@ -166,6 +166,8 @@
               document.getElementById("YCTnav").style.width = "0";
               document.getElementById("testpic").style.width = "0";  
               document.getElementById("full02").style.display = "none";
+              document.getElementById("close").style.display = "none";
+              
             }
 
             function openxptNAV(){

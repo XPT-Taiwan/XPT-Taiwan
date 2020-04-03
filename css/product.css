@@ -44,6 +44,12 @@
                 width:auto;
                 height: 70px;
             }
+            
+        }
+        @media(max-width:1000px){
+            #full_image{
+                width:100%;
+            }
         }
         body {
             text-align: center;
