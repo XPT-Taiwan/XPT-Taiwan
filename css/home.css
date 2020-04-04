@@ -44,6 +44,10 @@
                     width:auto;
                     height: 70px;
                 }
+                #facebook_icon{
+                    width:auto;
+                    height:20px;
+                }
             }
             body {
                 text-align: center;
