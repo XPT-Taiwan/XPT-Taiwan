@@ -53,7 +53,7 @@
                     text-align: center;
                     align-content: center;
                     overflow: hidden;
-                    font-size: 1em;
+                    font-size: 0.7em;
                 }
             }
             body {
@@ -74,11 +74,6 @@
                 margin-top:0;
 
                 
-            }
-            .footer{
-                margin-top: 0px;
-                padding-top: 0px;
-                margin-bottom: 0px;
             }
             @-ms-viewport{
                width: device-width;
@@ -158,3 +153,7 @@
                 max-width:100%;
             }
             .mySlides {display:none;}
+            footer{
+                background-color: #B2000E;
+                color:white;
+            }
