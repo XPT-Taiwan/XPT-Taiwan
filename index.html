@@ -144,7 +144,12 @@
                 document.getElementById("XDMnav").style.width = "0";
                 document.getElementById("YCTnav").style.width = "250px";
             }
-
+            
+            $(function() {
+                while( $('#fitin div').height() > $('#fitin').height() ) {
+                    $('#fitin div').css('font-size', (parseInt($('#fitin div').css('font-size')) - 1) + "px" );
+                }
+            });
 
         </script>
         
