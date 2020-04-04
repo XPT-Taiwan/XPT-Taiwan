@@ -130,6 +130,13 @@
             cursor: pointer;
 
         }
+        #facebook_icon{
+            padding-right: 1vw;
+        }
+        #facebook_icon:hover{
+            cursor: pointer;
+
+        }
         #banners_images{
             height:100%;
             width:100%
