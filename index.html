@@ -145,9 +145,9 @@
                 document.getElementById("YCTnav").style.width = "250px";
             }
             
-            $(function() {
-                while( $('#fitin div').height() > $('#fitin').height() ) {
-                    $('#fitin div').css('font-size', (parseInt($('#fitin div').css('font-size')) - 1) + "px" );
+            (function() {
+                while( $('#Copyright div').height() > $('#Copyright').height() ) {
+                    $('#Copyright div').css('font-size', (parseInt($('#Copyright div').css('font-size')) - 1) + "px" );
                 }
             });
 
@@ -155,7 +155,7 @@
         
 
     </body>
-    <footer style="max-width: 50%;">
-        <small>Copyright &copy; 2020, XPT Marketing Company Ltd. All rights reserved</small>
+    <footer align="center" id="Copyright"style="text-align: center;">
+        <div align="center" style="text-align: center;"><small>Copyright &copy; 2020, XPT Marketing Company Ltd. All rights reserved</small></div>
     </footer>
 </html>
