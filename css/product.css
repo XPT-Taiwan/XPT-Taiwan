@@ -155,3 +155,6 @@
             background-color: #B2000E;
             color:white;
         }
+        .fullpic{
+            overflow-y: visible;
+        }
