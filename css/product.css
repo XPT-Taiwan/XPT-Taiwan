@@ -44,6 +44,11 @@
                 width:auto;
                 height: 70px;
             }
+            #shoppee_icon{
+                width:auto;
+                height:30px;
+                padding-top:1vh;
+            }
             #facebook_icon{
                 width:auto;
                 height:30px;
@@ -135,6 +140,12 @@
         #menu_icon:hover{
             cursor: pointer;
 
+        }
+        #shoppee_icon{
+            padding-right: 1vw;
+        }
+        #shoppee_icon:hover{
+            cursor: pointer;
         }
         #facebook_icon{
             padding-right: 1vw;
